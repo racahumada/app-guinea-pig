@@ -1,0 +1,48 @@
+.boxLogin {
+  width: 500px;
+  padding: 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.boxLogin h3 {
+  text-align: center;
+}
+
+.boxLogin div.logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.boxForm {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 5px;
+  height: 3rem;
+  margin-bottom: 20px;
+  border: 0;
+  border-bottom: 1px solid #ddb45d;
+  color: #708090;
+}
+
+button {
+  height: 3rem;
+  border: 0px;
+  border-radius: 5px;
+  background-color: #ddb45d;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffdf99;
+}
