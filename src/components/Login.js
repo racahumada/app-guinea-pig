@@ -1,17 +1,27 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useHistory } from 'react-router-dom';
+import hostServices from '../services/hostServices.js';
+import { setToken } from '../config/auth.js'
 import css from './login.module.css';
 
 const Login = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
-  //
-  const onSubmit = (data) => console.log(data);
+  let history = useHistory();
+  const { register, handleSubmit, errors } = useForm();
+  
+  const onSubmit = async (data) => {
+    const result = await hostServices.getSignIn(data);
+    console.log(result)
+    const { token } = result.data;
+    console.log(token);
+    setToken(token);
+    history.push("/dashboard");
+  };
 
-  console.log(watch('email'));
   return (
     <div className={css.boxLogin}>
       <div className={css.logo}>
-        <img src="./guinea-pig-heag.png" alt="Logo" />
+        <img src="./img/guinea-pig-head.png" alt="Logo" />
       </div>
       <h3>LOGIN</h3>
       <form onSubmit={handleSubmit(onSubmit)} className={css.boxForm}>
