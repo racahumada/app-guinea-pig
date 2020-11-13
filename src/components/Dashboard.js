@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { isAuth, signOut } from '../config/auth.js';
-import css from './dashboard.module.css';
+import './dashboard.css';
 
 const Dashboard = () => {
   const history = useHistory();
@@ -12,7 +12,7 @@ const Dashboard = () => {
   };
 
   return isAuth ? (
-    <div className={css.dashContainer}>
+    <div className="dashContainer">
       <p>Logado</p>
       <button onClick={handleLogOut}>Logout</button>
     </div>
