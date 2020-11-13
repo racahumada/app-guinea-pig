@@ -2,20 +2,18 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 import hostServices from '../services/hostServices.js';
-import { setToken } from '../config/auth.js'
+import { setToken } from '../config/auth.js';
 import css from './login.module.css';
 
 const Login = () => {
   let history = useHistory();
   const { register, handleSubmit, errors } = useForm();
-  
+
   const onSubmit = async (data) => {
     const result = await hostServices.getSignIn(data);
-    console.log(result)
     const { token } = result.data;
-    console.log(token);
     setToken(token);
-    history.push("/dashboard");
+    history.push('/dashboard');
   };
 
   return (
