@@ -4,17 +4,16 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import SignUp from './components/SignUp.js';
 import Login from './components/Login.js';
-import Dashboard from './components/Dashboard.js'
-import PrivateRoute from './components/PrivateRoute.js'
+import Dashboard from './components/Dashboard.js';
+import PrivateRoute from './components/PrivateRoute.js';
 
 function App() {
   return (
     <>
       <Router>
-        {/* <Navbar /> */}
         <Switch>
           <Route exact path="/signup">
-            <Navbar />  
+            <Navbar />
             <SignUp />
           </Route>
           <Route exact path="/">
