@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 import hostServices from '../services/hostServices.js';
 import { setToken } from '../config/auth.js';
-import css from './login.module.css';
+import './login.css';
 
 const Login = () => {
   let history = useHistory();
@@ -17,12 +17,12 @@ const Login = () => {
   };
 
   return (
-    <div className={css.boxLogin}>
-      <div className={css.logo}>
+    <div className="boxLogin">
+      <div className="logo">
         <img src="./img/guinea-pig-head.png" alt="Logo" />
       </div>
       <h3>LOGIN</h3>
-      <form onSubmit={handleSubmit(onSubmit)} className={css.boxForm}>
+      <form onSubmit={handleSubmit(onSubmit)} className="boxForm">
         <label>Email:</label>
         <input
           type="text"
@@ -32,6 +32,7 @@ const Login = () => {
           ref={register({ required: true })}
         />
         {errors.email && <span>Campo de email obrigatório.</span>}
+
         <label>Senha:</label>
         <input
           type="password"
