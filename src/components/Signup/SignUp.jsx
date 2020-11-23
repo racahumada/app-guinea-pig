@@ -7,9 +7,9 @@ const SignUp = () => {
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data);
+    // console.log(data);
     const dataTest = await hostServices.postSignUp(data);
-    console.log(dataTest);
+    // console.log(dataTest);
   };
 
   return (

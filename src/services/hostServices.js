@@ -19,4 +19,5 @@ const getSignIn = (data) => {
   });
 };
 
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default { getListUser, postSignUp, getSignIn };
