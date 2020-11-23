@@ -1,8 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
-import hostServices from '../services/hostServices.js';
-import { setToken } from '../config/auth.js';
+import hostServices from '../../services/hostServices.js';
+import { setToken } from '../../config/auth.js';
 import './login.css';
 
 const Login = () => {

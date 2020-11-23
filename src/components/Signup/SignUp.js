@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import hostServices from '../services/hostServices.js';
+import hostServices from '../../services/hostServices.js';
 import './signup.css';
 
 const SignUp = () => {
