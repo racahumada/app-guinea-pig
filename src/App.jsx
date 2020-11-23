@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar.js';
-import SignUp from './components/Signup/SignUp.js';
-import Login from './components/Login/Login';
-import Dashboard from './components/Dashboard/Dashboard';
-import PrivateRoute from './components/PrivateRoute/PrivateRoute.js';
+import Navbar from './components/navbar/Navbar.jsx';
+import SignUp from './components/signup/SignUp.jsx';
+import Login from './components/login/Login.jsx';
+import Dashboard from './components/dashboard/Dashboard.jsx';
+import PrivateRoute from './components/privateroute/PrivateRoute.jsx';
 
 function App() {
   return (
