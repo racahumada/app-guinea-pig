@@ -14,7 +14,6 @@ const WrapperPanel = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 10px;
 `;
 
 const LinkPanel = styled(Link)`
@@ -22,7 +21,11 @@ const LinkPanel = styled(Link)`
   color: ${color.btnLightTx};
   text-decoration: none;
   padding: 0.8rem 3rem;
-  border-radius: 3px;
+  transition: 0.3s;
+  &:hover {
+    background-color: ${color.btnLightTx};
+    color: ${color.btnLightBg};
+  }
 `;
 
 export default function DashPanel() {

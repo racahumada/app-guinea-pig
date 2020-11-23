@@ -12,13 +12,13 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/signup">
+          <Route path="/signup">
             <SignUp />
           </Route>
           <Route exact path="/">
             <Login />
           </Route>
-          <PrivateRoute exact path="/dashboard/">
+          <PrivateRoute path="/dashboard/">
             <Dashboard />
           </PrivateRoute>
         </Switch>

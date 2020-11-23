@@ -41,7 +41,8 @@ const Navbar = () => {
         </Link>
         <nav className="navbar">
           <ul>
-            {location.pathname === '/' && linksHome}
+            {(location.pathname === '/' || location.pathname === '/signup') &&
+              linksHome}
             {location.pathname === '/dashboard' && linksDash}
           </ul>
         </nav>
