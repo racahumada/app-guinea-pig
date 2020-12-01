@@ -1,18 +1,11 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import styled from 'styled-components';
-import DashPanel from '../dashpanel/DashPanel';
+import DashPanel from './DashPanel/DashPanel';
 import { isAuth } from '../../config/auth.js';
-
-const WrapperMain = styled.main`
-  width: 70vw;
-  min-height: 800px;
-  margin: 0 auto;
-  background-color: #c3c3c3;
-`;
+import { WrapperMain } from './style';
+import WrapperPdi from './WrapperPdi/WrapperPdi';
 
 const Dashboard = () => {
-  console.log();
   return isAuth ? (
     <>
       <DashPanel />
@@ -21,7 +14,7 @@ const Dashboard = () => {
           <h1>Dash Home</h1>
         </Route>
         <Route path="/dashboard/pdi">
-          <h1>Dash PDI</h1>
+          <WrapperPdi />
         </Route>
         <Route path="/dashboard/alimentacao">
           <h1>Dash Alimentação</h1>

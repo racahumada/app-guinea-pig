@@ -8,7 +8,8 @@ const SignUp = () => {
 
   const onSubmit = async (data) => {
     // console.log(data);
-    const dataTest = await hostServices.postSignUp(data);
+    // const dataTest = await hostServices.postSignUp(data);
+    await hostServices.postSignUp(data);
     // console.log(dataTest);
   };
 
