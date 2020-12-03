@@ -17,8 +17,16 @@ export default function FormAddPdi() {
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = async (data) => {
-    const dataJoin = { ...data, ...user };
-    const result = await hostServices.postNewPdi(dataJoin);
+    const { name, birthday, gender, pelage } = data;
+    const { id } = user;
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('birthday', birthday);
+    formData.append('gender', gender);
+    formData.append('pelage', pelage);
+    formData.append('userId', id);
+    formData.append('picture', data.fotoperfil[0]);
+    const result = await hostServices.postNewPdi(formData);
     console.log('Result newPdi', result);
   };
 
@@ -36,20 +44,20 @@ export default function FormAddPdi() {
         {errors.name && <span>Campo de nome é Obrigatório</span>}
         <LabelForm>Nascimento</LabelForm>
         <InputForm
-          name="nascimento"
+          name="birthday"
           type="date"
           ref={register({ required: true })}
         />
         {errors.nascimento && <span>Campo de nascimento é Obrigatório</span>}
         <LabelForm>Sexo</LabelForm>
-        <SelectForm name="sexo" ref={register({ required: true })}>
+        <SelectForm name="gender" ref={register({ required: true })}>
           <option></option>
           <option value="femea">Fêmea</option>
           <option value="macho">Macho</option>
         </SelectForm>
         {errors.sexo && <span>Campo de sexo é Obrigatório</span>}
         <LabelForm>Pelagem</LabelForm>
-        <SelectForm name="pelagem" ref={register({ required: true })}>
+        <SelectForm name="pelage" ref={register({ required: true })}>
           <option></option>
           <option value="ingles">Inglês</option>
           <option value="peruano">Peruano</option>
@@ -64,14 +72,11 @@ export default function FormAddPdi() {
           <option value="ridgeback">Ridgeback</option>
           <option value="skinny">Skinny</option>
           <option value="coroado-ingles">Coroado Inglês</option>
+          <option value="outro">Outro</option>
         </SelectForm>
         {errors.pelagem && <span>Campo de pelagem é Obrigatório</span>}
         <LabelForm>Foto de Perfil</LabelForm>
-        <InputForm
-          name="fotoPerfil"
-          type="file"
-          ref={register({ required: true })}
-        />
+        <InputForm name="fotoperfil" type="file" ref={register} />
         {errors.fotoPerfil && <span>Campo de nascimento é Obrigatório</span>}
         <button>Salvar</button>
       </BoxForm>
