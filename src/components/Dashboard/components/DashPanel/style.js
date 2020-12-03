@@ -14,13 +14,13 @@ export const WrapperPanel = styled.div`
 `;
 
 export const LinkPanel = styled(Link)`
-  background-color: ${(props) => props.theme.btnLightBg};
+  background-color: ${(props) => props.theme.btnDarkBg};
   color: ${(props) => props.theme.btnLightTx};
   text-decoration: none;
   padding: 0.8rem 3rem;
   transition: 0.3s;
   &:hover {
     background-color: ${(props) => props.theme.btnLightTx};
-    color: ${(props) => props.theme.btnLightBg};
+    color: ${(props) => props.theme.btnDarkBg};
   }
 `;

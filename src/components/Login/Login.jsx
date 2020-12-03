@@ -7,10 +7,11 @@ import './login.css';
 const Login = () => {
   const { logIn } = useContext(AuthContext);
   let history = useHistory();
+
   const { register, handleSubmit, errors } = useForm();
 
-  const onSubmit = (data) => {
-    logIn(data);
+  const onSubmit = async (data) => {
+    await logIn(data);
     history.push('/dashboard');
   };
 

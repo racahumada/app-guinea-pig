@@ -50,7 +50,7 @@ button:hover {
   background-color: #ffdf99;
 }
 
-span {
+.boxLogin span {
   color: #f00;
   margin-bottom: 20px;
 }

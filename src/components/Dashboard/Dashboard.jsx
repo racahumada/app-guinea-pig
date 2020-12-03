@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import DashPanel from './DashPanel/DashPanel';
+import DashPanel from './components/DashPanel/DashPanel';
 import { isAuth } from '../../config/auth.js';
 import { WrapperMain } from './style';
-import WrapperPdi from './WrapperPdi/WrapperPdi';
+import WrapperPdi from './components/WrapperPdi/WrapperPdi';
 
 const Dashboard = () => {
   return isAuth ? (

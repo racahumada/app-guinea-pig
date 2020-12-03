@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { signOut } from '../../config/auth.js';
 import './navbar.css';
 import { AuthContext } from '../../providers/auth/authContext.js';
 
@@ -12,12 +11,11 @@ const regexDash = (value) => {
 };
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
-  console.log(user);
   const location = useLocation();
+  const { logOut } = useContext(AuthContext);
 
   const handleLogout = () => {
-    signOut();
+    logOut();
   };
 
   //Estrutura de links das páginas raiz e signup
@@ -47,7 +45,7 @@ const Navbar = () => {
     <header>
       <div className="container">
         <Link to="/" className="title">
-          GUINEA APP - {user.name}
+          GUINEA APP
         </Link>
         <nav className="navbar">
           <ul>
