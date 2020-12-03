@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import { AuthContext } from '../../../../../../providers/auth/authContext';
+import { AuthContext } from '../../../../../providers/auth/authContext';
+import hostServices from '../../../../../services/hostServices.js';
 
 import {
   WrapperForm,
@@ -15,9 +16,10 @@ export default function FormAddPdi() {
   const { user } = useContext(AuthContext);
   const { register, handleSubmit, errors } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(user);
-    console.log(data);
+  const onSubmit = async (data) => {
+    const dataJoin = { ...data, ...user };
+    const result = await hostServices.postNewPdi(dataJoin);
+    console.log('Result newPdi', result);
   };
 
   return (

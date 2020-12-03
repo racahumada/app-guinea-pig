@@ -19,5 +19,9 @@ const getSignIn = (data) => {
   });
 };
 
+const postNewPdi = (data) => {
+  return httpConnect.post('/pdi/new', data);
+};
+
 /* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
-export default { getListUser, postSignUp, getSignIn };
+export default { getListUser, postSignUp, getSignIn, postNewPdi };

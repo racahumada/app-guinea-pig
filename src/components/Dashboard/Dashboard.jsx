@@ -18,7 +18,8 @@ const Dashboard = () => {
   useEffect(() => {
     ifRefresh();
   });
-  console.log(user);
+
+  console.log('Dashboard', user);
 
   return isAuth ? (
     <>

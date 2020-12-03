@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { Wrapper } from '../Wrapper/style';
 import { SubNavbar } from '../Subnavbar/SubNavbar';
-import FormAddPdi from './components/FormAddPdi/FormAddPdi';
+import FormAddPdi from './FormAddPdi/FormAddPdi';
 
 const WrapperPdi = () => {
   return (
