@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useContext, useEffect, useCallback } from 'react';
 import { Route } from 'react-router-dom';
 import DashPanel from './components/DashPanel/DashPanel';
 import { isAuth } from '../../config/auth.js';
 import { WrapperMain } from './style';
 import WrapperPdi from './components/WrapperPdi/WrapperPdi';
+import { AuthContext } from '../../providers/auth/authContext';
 
 const Dashboard = () => {
+  const { user, refreshGetStorage } = useContext(AuthContext);
+
+  const ifRefresh = useCallback(() => {
+    if (user.name === null) {
+      refreshGetStorage(isAuth());
+    }
+  }, [user, refreshGetStorage]);
+
+  useEffect(() => {
+    ifRefresh();
+  });
+  console.log(user);
+
   return isAuth ? (
     <>
       <DashPanel />

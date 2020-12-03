@@ -1,12 +1,14 @@
-const tokenApp = 'guineaToken';
+const authApp = 'guineaAuth';
+
 export const isAuth = () => {
-  return localStorage.getItem(tokenApp);
+  return JSON.parse(localStorage.getItem(authApp));
 };
 
-export const setToken = (token) => {
-  localStorage.setItem(tokenApp, token);
+export const setAuth = (data) => {
+  data = JSON.stringify(data);
+  localStorage.setItem(authApp, data);
 };
 
 export const signOut = () => {
-  localStorage.removeItem(tokenApp);
+  localStorage.removeItem(authApp);
 };
