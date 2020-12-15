@@ -3,13 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './globalStyle';
 import { theme } from './config/theme';
-import {
-  Dashboard,
-  Login,
-  Navbar,
-  PrivateRoute,
-  SignUp,
-} from './components/index.js';
+import { Header } from './components/index';
+import { PrivateRoute } from './routes/index';
+import { Dashboard, Login, SignUp } from './containers/index';
 import { AuthProvider } from './providers/auth/authContext.js';
 
 function App() {
@@ -19,7 +15,7 @@ function App() {
         <>
           <GlobalStyles />
           <Router>
-            <Navbar />
+            <Header />
             <Switch>
               <Route path="/signup">
                 <SignUp />

@@ -1,7 +1,8 @@
-import Dashboard from './Dashboard/Dashboard';
-import Login from './Login/Login';
-import Navbar from './Navbar/Navbar';
-import PrivateRoute from './Privateroute/PrivateRoute';
-import SignUp from './Signup/SignUp';
+import DashMenu from './DashMenu/DashMenu';
+import DashSubMenu from './DashSubMenu/DashSubMenu';
+import FormAddPdi from './FormAddPdi/FormAddPdi';
+import Header from './Header/Header';
+import Wrapper from './Wrapper/style';
+import WrapperPdi from './WrapperPdi/WrapperPdi';
 
-export { Dashboard, Login, Navbar, PrivateRoute, SignUp };
+export { DashMenu, DashSubMenu, FormAddPdi, Header, Wrapper, WrapperPdi };

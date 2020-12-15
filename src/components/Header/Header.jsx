@@ -10,7 +10,7 @@ const regexDash = (value) => {
   return resultRegex;
 };
 
-const Navbar = () => {
+const Header = () => {
   const location = useLocation();
   const { logOut } = useContext(AuthContext);
 
@@ -61,4 +61,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

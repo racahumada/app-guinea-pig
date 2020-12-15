@@ -13,7 +13,7 @@ const subPage = (value) => {
   return local;
 };
 
-export const SubNavbar = () => {
+const DashSubMenu = () => {
   let location = useLocation();
 
   const LinksPdi = (
@@ -30,3 +30,5 @@ export const SubNavbar = () => {
     </WrapperNavbar>
   );
 };
+
+export default DashSubMenu;

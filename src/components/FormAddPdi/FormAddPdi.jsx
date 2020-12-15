@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { AuthContext } from '../../../../../providers/auth/authContext';
-import hostServices from '../../../../../services/hostServices.js';
+import { AuthContext } from '../../providers/auth/authContext';
+import hostServices from '../../services/hostServices.js';
 
 import {
   WrapperForm,
@@ -10,9 +10,10 @@ import {
   InputForm,
   SelectForm,
 } from './style';
+
 import { useForm } from 'react-hook-form';
 
-export default function FormAddPdi() {
+function FormAddPdi() {
   const { user } = useContext(AuthContext);
   const { register, handleSubmit, errors } = useForm();
 
@@ -83,3 +84,5 @@ export default function FormAddPdi() {
     </WrapperForm>
   );
 }
+
+export default FormAddPdi;

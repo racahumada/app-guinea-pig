@@ -1,13 +1,11 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Wrapper } from '../Wrapper/style';
-import { SubNavbar } from '../Subnavbar/SubNavbar';
-import FormAddPdi from './FormAddPdi/FormAddPdi';
+import { DashSubMenu, FormAddPdi, Wrapper } from '../index';
 
 const WrapperPdi = () => {
   return (
     <Wrapper>
-      <SubNavbar />
+      <DashSubMenu />
       <Route exact path="/dashboard/pdi/add">
         <FormAddPdi />
       </Route>
