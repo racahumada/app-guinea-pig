@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/auth/authContext';
 import hostServices from '../../services/hostServices.js';
-
+import { Input } from '../index';
 import {
   WrapperForm,
   TitleForm,
@@ -35,14 +35,23 @@ function FormAddPdi() {
     <WrapperForm>
       <TitleForm>ADICIONAR NOVO PDI</TitleForm>
       <BoxForm onSubmit={handleSubmit(onSubmit)}>
-        <LabelForm>Nome</LabelForm>
-        <InputForm
+        <Input
+          label="Nome"
           name="name"
           type="text"
           placeholder="Nome do Pig"
           ref={register({ required: true })}
         />
         {errors.name && <span>Campo de nome é Obrigatório</span>}
+        {/* <LabelForm>Nome</LabelForm>
+        <InputForm
+          name="name"
+          type="text"
+          placeholder="Nome do Pig"
+          ref={register({ required: true })}
+        />
+        {errors.name && <span>Campo de nome é Obrigatório</span>} */}
+
         <LabelForm>Nascimento</LabelForm>
         <InputForm
           name="birthday"

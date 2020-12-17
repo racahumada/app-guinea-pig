@@ -18,7 +18,7 @@ export const BoxForm = styled.form`
   flex-direction: column;
 
   & span {
-    color: ${(props) => props.theme.alert};
+    color: ${({ theme }) => theme.primary.alert};
     margin-bottom: 20px;
   }
 `;
@@ -32,7 +32,7 @@ export const InputForm = styled.input`
   height: 3rem;
   margin-bottom: 20px;
   border: 0;
-  border-bottom: 1px solid ${(props) => props.theme.principal};
+  border-bottom: 1px solid ${({ theme }) => theme.primary.principal};
 `;
 
 export const SelectForm = styled.select`
@@ -40,5 +40,5 @@ export const SelectForm = styled.select`
   height: 3rem;
   margin-bottom: 20px;
   border: 0;
-  border-bottom: 1px solid ${(props) => props.theme.principal};
+  border-bottom: 1px solid ${({ theme }) => theme.primary.principal};
 `;

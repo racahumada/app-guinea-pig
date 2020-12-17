@@ -5,12 +5,12 @@ export const WrapperNavbar = styled.nav`
   width: 100%;
   display: flex;
   justify-content: space-around;
-  background-color: ${(props) => props.theme.subnav};
+  background-color: ${({ theme }) => theme.primary.subnav};
 `;
 
 export const LinkPdi = styled(Link)`
-  background-color: ${(props) => props.theme.subnav};
-  color: ${(props) => props.theme.btnLightTx};
+  background-color: ${({ theme }) => theme.primary.subnav};
+  color: ${({ theme }) => theme.primary.btnLightTx};
   text-decoration: none;
   padding: 0.5rem 2rem;
   transition: 0.3s;
@@ -18,8 +18,8 @@ export const LinkPdi = styled(Link)`
   align-items: center;
 
   &:hover {
-    background-color: ${(props) => props.theme.btnLightTx};
-    color: ${(props) => props.theme.subnav};
+    background-color: ${({ theme }) => theme.primary.btnLightTx};
+    color: ${({ theme }) => theme.primary.subnav};
   }
 
   & span {

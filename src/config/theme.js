@@ -1,8 +1,10 @@
 export const theme = {
-  principal: '#ddb45d',
-  panel: '#3b3b3b',
-  subnav: '#616161',
-  btnDarkBg: '#3b3b3b',
-  btnLightTx: '#fff',
-  alert: '#f00',
+  primary: {
+    principal: '#ddb45d',
+    panel: '#3b3b3b',
+    subnav: '#616161',
+    btnDarkBg: '#3b3b3b',
+    btnLightTx: '#fff',
+    alert: '#f00',
+  },
 };

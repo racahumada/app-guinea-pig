@@ -8,8 +8,7 @@ function DashMenu() {
         <LinkPanel to="/dashboard/">Principal</LinkPanel>
         <LinkPanel to="/dashboard/pdi">PDI</LinkPanel>
         <LinkPanel to="/dashboard/alimentacao">Alimentação</LinkPanel>
-        <LinkPanel to="/dashboard/saude">Sa�de</LinkPanel>
-        <LinkPanel to="/dashboard/estetica">Estética</LinkPanel>
+        <LinkPanel to="/dashboard/saude">Saúde e Estética</LinkPanel>
         <LinkPanel to="/dashboard/cercado">Cercado</LinkPanel>
       </WrapperPanel>
     </Panel>
